@@ -7,15 +7,15 @@ function foo() {
 }
 
 function bar() {
-    local y=$1 # $1: acces to the actual paramter
+    y=$1 # $1: acces to the actual paramter
     echo "In bar: x = $x"
     echo "In bar: y = $y"
-    foo
+    baz $((y+1))
 }
 
 # Let's define one more function
 function baz() {
-    local y=$1 # $1: acces to the actual paramter
+    y=$1 # $1: acces to the actual paramter
     echo "In baz: x = $x"
     echo "In baz: y = $y"
     foo
