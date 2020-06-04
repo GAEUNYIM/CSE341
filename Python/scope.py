@@ -1,12 +1,14 @@
 def A(I, P):
 
-    def B():
-        print(I)
+    def B(J):
+        print('B: I = ' + str(I))
+        print('B: J = ' + str(J))
 
-    if I > 1:
-        P()
+    print('A: I = ' + str(I))
+    if I > 2:
+        P(I)
     else:
-        A(2, B)
+        A(I + 1, B)
 
 
 def C():
